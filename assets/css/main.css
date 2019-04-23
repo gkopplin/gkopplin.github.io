@@ -1468,6 +1468,18 @@ input, select, textarea {
 			display: block;
 			width: 100%;
 		}
+	
+	#grumblr-container {
+		width: 35%;
+	}
+
+	#maze-escape-container {
+		width: 30%;
+	}
+	
+	#headshot {
+		width: 80%;
+	}
 
 	.button-large {
 		background-image: -moz-linear-gradient(top, #ed391b, #ce1a00);
@@ -1647,6 +1659,11 @@ input, select, textarea {
 		#content .check-list li {
 			border-bottom: solid 1px #e2e6e8;
 		}
+
+	.home-container-1 {
+		display: flex;
+		justify-content: space-between;
+	}
 
 /* Footer */
 
