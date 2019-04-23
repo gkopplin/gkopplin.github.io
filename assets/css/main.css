@@ -1468,18 +1468,6 @@ input, select, textarea {
 			display: block;
 			width: 100%;
 		}
-	
-	#grumblr-container {
-		width: 35%;
-	}
-
-	#maze-escape-container {
-		width: 30%;
-	}
-	
-	#headshot {
-		width: 80%;
-	}
 
 	.button-large {
 		background-image: -moz-linear-gradient(top, #ed391b, #ce1a00);
@@ -1705,7 +1693,7 @@ input, select, textarea {
 		border-top: solid 1px #b5bec3;
 		box-shadow: inset 0px 1px 0px 0px #e0e4e7;
 		text-align: center;
-		padding: 45px 0 80px 0;
+		padding: 5px 0 5px 0;
 		color: #8d9ca3;
 		text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.5);
 	}
@@ -2039,3 +2027,21 @@ input, select, textarea {
 			}
 
 	}
+
+/* Home */
+#grumblr-container {
+	width: 35%;
+}
+
+#maze-escape-container {
+	width: 30%;
+}
+
+#headshot {
+	width: 80%;
+}
+
+.skills {
+	list-style-type: disc;
+	margin-left: 10px;
+}
