@@ -2050,6 +2050,11 @@ input, select, textarea {
 	margin-right: 45px;
 }
 
+#headshot-center {
+	display: flex;
+	justify-content: center;
+}
+
 /* Resume */
 
 .pdf {
@@ -2080,22 +2085,23 @@ input, select, textarea {
 	font-size: 120%;
 }
 
-li > img {
+.skills > li > img {
 	width: 100%;
 }
 
-li {
+.skills > li {
 	width: 60px;
 	margin: 20px;
 	display: flex;
 	align-items: center;
 }
 
-ul {
+.skills {
 	display: flex;
 	justify-content: center;
 }
 
-.skills {
+.center {
 	display: flex;
+	justify-content: center;
 }
