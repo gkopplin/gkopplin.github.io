@@ -1650,7 +1650,8 @@ input, select, textarea {
 
 	.home-container-1 {
 		display: flex;
-		justify-content: space-between;
+		flex-direction: row;
+		justify-content: center;
 	}
 
 /* Footer */
@@ -2031,14 +2032,22 @@ input, select, textarea {
 /* Home */
 #grumblr-container {
 	width: 35%;
+	margin-right: 30px;
 }
 
 #maze-escape-container {
-	width: 30%;
+	width: 33%;
+}
+
+#maze {
+	margin-right: 15px;
+	margin-left: 15px;
 }
 
 #headshot {
-	width: 80%;
+	width: 20%;
+	height: 20%;
+	margin-right: 45px;
 }
 
 .skills {
@@ -2051,4 +2060,27 @@ input, select, textarea {
 .pdf {
 	width: 100%;
 	height: 700px;
+}
+
+#about_me {
+	font-size: 200%;
+	color: white;
+}
+
+#projects {
+	font-size: 200%;
+	display: flex;
+	justify-content: center;
+	margin-bottom: 30px;
+}
+
+#about-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	width: 70%;
+}
+
+#about-text {
+	font-size: 120%;
 }
