@@ -2050,11 +2050,6 @@ input, select, textarea {
 	margin-right: 45px;
 }
 
-.skills {
-	list-style-type: disc;
-	margin-left: 10px;
-}
-
 /* Resume */
 
 .pdf {
@@ -2067,7 +2062,7 @@ input, select, textarea {
 	color: white;
 }
 
-#projects {
+.custom-header {
 	font-size: 200%;
 	display: flex;
 	justify-content: center;
@@ -2083,4 +2078,24 @@ input, select, textarea {
 
 #about-text {
 	font-size: 120%;
+}
+
+li > img {
+	width: 100%;
+}
+
+li {
+	width: 60px;
+	margin: 20px;
+	display: flex;
+	align-items: center;
+}
+
+ul {
+	display: flex;
+	justify-content: center;
+}
+
+.skills {
+	display: flex;
 }
