@@ -1,51 +1,37 @@
-/*
-	Halcyonic by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-*/
+document.addEventListener("DOMContentLoaded", () => {
+    const canvas = document.getElementsByTagName('canvas')[0];
+    const ctx = canvas.getContext('2d');
 
-(function($) {
+    let posX = 550;
+    let posY = -50;
 
-	var $window = $(window),
-		$body = $('body');
+    function animation() {
+        update();
+        draw();
 
-	// Breakpoints.
-		breakpoints({
-			xlarge:  [ '1281px',  '1680px' ],
-			large:   [ '981px',   '1280px' ],
-			medium:  [ '737px',   '980px'  ],
-			small:   [ null,      '736px'  ]
-		});
+        window.requestAnimationFrame(animation);
+    }
 
-	// Nav.
+    function update() {
+        posX -= 5;
+        posY += 5;
+    }
 
-		// Title Bar.
-			$(
-				'<div id="titleBar">' +
-					'<a href="#navPanel" class="toggle"></a>' +
-					'<span class="title">' + $('#logo').html() + '</span>' +
-				'</div>'
-			)
-				.appendTo($body);
+    function draw() {
+        ctx.beginPath();
+        ctx.moveTo(posX, posY);
+        ctx.lineTo(posX - 40, posY + 40);
+        ctx.lineTo(posX, posY + 40);
+        ctx.lineTo(posX + 40, posY);
+        ctx.lineTo(posX, posY);
 
-		// Panel.
-			$(
-				'<div id="navPanel">' +
-					'<nav>' +
-						$('#nav').navList() +
-					'</nav>' +
-				'</div>'
-			)
-				.appendTo($body)
-				.panel({
-					delay: 500,
-					hideOnClick: true,
-					hideOnSwipe: true,
-					resetScroll: true,
-					resetForms: true,
-					side: 'left',
-					target: $body,
-					visibleClass: 'navPanel-visible'
-				});
+        ctx.stroke();
+        ctx.strokeStyle = "#000000";
+        ctx.fillStyle = "#000000";
 
-})(jQuery);
+        ctx.fill();
+        ctx.closePath();
+    }
+
+    window.requestAnimationFrame(animation);
+});
