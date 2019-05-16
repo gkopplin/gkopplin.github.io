@@ -1,0 +1,27 @@
+{
+  "name": "gkopplin.github.io",
+  "version": "1.0.0",
+  "description": "[Live Link](https://gkopplin.github.io)",
+  "main": "webpack.config.js",
+  "dependencies": {
+    "webpack": "^4.31.0"
+  },
+  "devDependencies": {
+    "webpack-cli": "^3.3.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "webpack": "webpack -w --mode=development"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gkopplin/gkopplin.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gkopplin/gkopplin.github.io/issues"
+  },
+  "homepage": "https://github.com/gkopplin/gkopplin.github.io#readme"
+}
