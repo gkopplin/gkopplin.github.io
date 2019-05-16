@@ -7,21 +7,25 @@ class Line {
     }
 
     update() {
-        this.posX -= 5;
-        this.posY += 5;
+        if (this.posY + 8 < this.limit) {
+            this.posX -= 8;
+        }
+        if (this.posY + 8 < this.limit) {
+            this.posY += 8;
+        }
     }
 
     draw() {
         this.ctx.beginPath();
         this.ctx.moveTo(this.posX, this.posY);
-        this.ctx.lineTo(this.posX - 40, this.posY + 40);
-        this.ctx.lineTo(this.posX, this.posY + 40);
-        this.ctx.lineTo(this.posX + 40, this.posY);
+        this.ctx.lineTo(this.posX - 120, this.posY + 120);
+        this.ctx.lineTo(this.posX, this.posY + 120);
+        this.ctx.lineTo(this.posX + 120, this.posY);
         this.ctx.lineTo(this.posX, this.posY);
 
         this.ctx.stroke();
-        this.ctx.strokeStyle = "#000000";
-        this.ctx.fillStyle = "#000000";
+        this.ctx.strokeStyle = "#4d4d4d";
+        this.ctx.fillStyle = "#4d4d4d";
 
         this.ctx.fill();
         this.ctx.closePath();
