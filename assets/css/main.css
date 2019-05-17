@@ -1,5 +1,54 @@
+body {
+	background: #f5f5f5;
+}
+
 canvas {
 	position: absolute;
 	top: 0;
 	right: 0;
+	z-index: -1;
+}
+
+nav > a {
+	color: whitesmoke;
+	text-transform: uppercase;
+	font-size: 110%;
+	text-decoration: none;
+	font-family: sans-serif;
+	font-weight: bolder;
+}
+
+/* #home {
+	position: absolute;
+    top: 110px;
+    right: 610px;
+}
+
+#about-me {
+	position: absolute;
+	top: 110px;
+    right: 455px;
+} */
+
+nav {
+	display: flex;
+	position: absolute;
+	top: 108px;
+    right: 61px;
+}
+
+#home {
+	margin-right: 67px;
+}
+
+#about-me {
+	margin-right: 46px;
+}
+
+#resume {
+	margin-left: 47px;
+}
+
+#contact {
+	margin-left: 62px;
 }

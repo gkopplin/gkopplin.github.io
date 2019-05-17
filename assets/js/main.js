@@ -1,22 +1,31 @@
+import Tab from './tab.js';
 import Line from './line.js';
 
 document.addEventListener("DOMContentLoaded", () => {
     const canvas = document.getElementsByTagName('canvas')[0];
     const ctx = canvas.getContext('2d');
-    const lines = [new Line({ limit: 100, posX: 580, posY: -250, ctx: ctx }),
-                   new Line({ limit: 50, posX: 660, posY: -200, ctx: ctx }),
-                   new Line({limit: 220, posX: 740, posY: -150, ctx: ctx}),
-                   new Line({ limit: 140, posX: 970, posY: -250, ctx: ctx }),
-                   new Line({ limit: 110, posX: 1000, posY: -150, ctx: ctx })];
+    const tabs = [new Tab({ limit: 100, posX: 540, posY: -250, ctx: ctx }),
+                   new Tab({ limit: 50, posX: 630, posY: -200, ctx: ctx }),
+                   new Tab({limit: 220, posX: 720, posY: -150, ctx: ctx}),
+                   new Tab({ limit: 140, posX: 960, posY: -250, ctx: ctx }),
+                   new Tab({ limit: 110, posX: 1000, posY: -150, ctx: ctx })];
+    const line = new Line({posX: 100, ctx});
 
     function animation() {
-        lines.forEach(line => {
+        tabs.forEach(tab => {
+            tab.update();
+            tab.draw();
+        });
+        
+        if (tabs.every(tab => tab.done)){
             line.update();
             line.draw();
-        });
-
-        window.requestAnimationFrame(animation);
+        }
+        if(!line.done) {
+            window.requestAnimationFrame(animation);
+        }
     }
+
 
     
 

@@ -1,34 +1,45 @@
 class Line {
-    constructor ({limit, posX, posY, ctx}) {
-        this.limit = limit;
+    constructor ({ posX, ctx}) {
         this.posX = posX;
-        this.posY = posY;
         this.ctx = ctx;
     }
 
     update() {
-        if (this.posY + 8 < this.limit) {
-            this.posX -= 8;
-        }
-        if (this.posY + 8 < this.limit) {
-            this.posY += 8;
+        console.log("update");
+        if (this.posX + 25 < 1000) {
+            this.posX += 25;
+        } else {
+            this.done = true;
         }
     }
 
     draw() {
         this.ctx.beginPath();
-        this.ctx.moveTo(this.posX, this.posY);
-        this.ctx.lineTo(this.posX - 120, this.posY + 120);
-        this.ctx.lineTo(this.posX, this.posY + 120);
-        this.ctx.lineTo(this.posX + 120, this.posY);
-        this.ctx.lineTo(this.posX, this.posY);
+        this.ctx.moveTo(this.posX, 100);
+        this.ctx.lineTo(this.posX + 25, 100);
+        this.ctx.lineTo(this.posX + 25, 101);
+        this.ctx.lineTo(this.posX, 101);
+        this.ctx.lineTo(this.posX, 100);
 
-        this.ctx.stroke();
-        this.ctx.strokeStyle = "#4d4d4d";
-        this.ctx.fillStyle = "#4d4d4d";
-
+        this.ctx.globalCompositeOperation = "source-over";
+        this.ctx.fillStyle = "#f5f5f5";
         this.ctx.fill();
+
         this.ctx.closePath();
+
+        this.ctx.beginPath();
+        this.ctx.moveTo(this.posX, 135);
+        this.ctx.lineTo(this.posX + 25, 135);
+        this.ctx.lineTo(this.posX + 25, 136);
+        this.ctx.lineTo(this.posX, 136);
+        this.ctx.lineTo(this.posX, 135);
+
+        this.ctx.globalCompositeOperation = "source-over";
+        this.ctx.fillStyle = "#f5f5f5";
+        this.ctx.fill();
+
+        this.ctx.closePath();
+
     }
 }
 
