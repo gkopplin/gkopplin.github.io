@@ -5,7 +5,6 @@ class Line {
     }
 
     update() {
-        console.log("update");
         if (this.posX + 25 < 1000) {
             this.posX += 25;
         } else {
