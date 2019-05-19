@@ -1,9 +1,10 @@
 class Tab {
-    constructor ({limit, posX, posY, ctx}) {
+    constructor ({limit, posX, posY, ctx, color}) {
         this.limit = limit;
         this.posX = posX;
         this.posY = posY;
         this.ctx = ctx;
+        this.color = color;
     }
 
     update() {
@@ -28,8 +29,8 @@ class Tab {
         this.ctx.lineTo(this.posX, this.posY);
 
         this.ctx.globalCompositeOperation = "destination-over";
-        this.ctx.strokeStyle = "#4d4d4d";
-        this.ctx.fillStyle = "#4d4d4d";
+        this.ctx.strokeStyle = this.color;
+        this.ctx.fillStyle = this.color;
 
         this.ctx.fill();
         this.ctx.closePath();
