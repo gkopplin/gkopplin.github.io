@@ -5,12 +5,14 @@ import Tab from './tab';
 class Header extends React.Component {
     constructor(props) {
         super(props);
-        this.animation = this.animation.bind(this);
+        this.initialDraw = this.initialDraw.bind(this);
+        this.mouseOnDraw = this.mouseOnDraw.bind(this);
         this.checkMousePos = this.checkMousePos.bind(this);
-        this.colors = ["#7D7D7D", "#808080", "#838382", "#868686", "#858685"];
+        this.colors = ["#7d7d7d", "#808080", "#838382", "#868686", "#858685"];
         this.state = {mouseX: 0, 
                       mouseY: 0,
-                      mouseColor: "#000000"};
+                      mouseColor: "#000000",
+                      tabs: []};
     }
 
     checkMousePos(e) {
@@ -18,6 +20,16 @@ class Header extends React.Component {
 
         const imgData = this.ctx.getImageData(this.state.mouseX, this.state.mouseY, 1, 1).data;
         const hex = "#" + (this.rgbToHex(imgData[0], imgData[1], imgData[2]));
+
+        this.state.tabs.forEach((tab, idx) => {
+            if(tab.color === hex && this.state.mouseColor !== hex) {
+                let newTabs = this.state.tabs;
+                newTabs[idx].limit += 50;
+                this.setState({tabs: newTabs});
+                tab.done = false;
+                this.mouseOnDraw(tab);
+            }
+        });
         this.setState({mouseColor: hex});
     }
 
@@ -32,28 +44,37 @@ class Header extends React.Component {
         const canvas = document.getElementById('canvas');
         this.ctx = canvas.getContext('2d');
         this.line = new Line({ posX: 100, ctx: this.ctx });
-        this.tabs = [new Tab({ limit: 100, posX: 540, posY: -250, ctx: this.ctx, color: this.colors[0]}),
+        this.setState({tabs: [new Tab({ limit: 100, posX: 540, posY: -250, ctx: this.ctx, color: this.colors[0]}),
             new Tab({ limit: 50, posX: 630, posY: -200, ctx: this.ctx, color: this.colors[1] }),
             new Tab({ limit: 220, posX: 720, posY: -150, ctx: this.ctx, color: this.colors[2] }),
             new Tab({ limit: 140, posX: 960, posY: -250, ctx: this.ctx, color: this.colors[3] }),
-            new Tab({ limit: 110, posX: 1000, posY: -150, ctx: this.ctx, color: this.colors[4] })];
+            new Tab({ limit: 110, posX: 1000, posY: -150, ctx: this.ctx, color: this.colors[4] })]});
 
-        window.requestAnimationFrame(this.animation);
+        window.requestAnimationFrame(this.initialDraw);
         canvas.onmousemove = this.checkMousePos;
     }
 
-    animation() {
-        this.tabs.forEach(tab => {
+    initialDraw() {
+        this.state.tabs.forEach(tab => {
             tab.update();
             tab.draw();
         });
 
-        if (this.tabs.every(tab => tab.done)) {
+        if (this.state.tabs.every(tab => tab.done)) {
             this.line.update();
             this.line.draw();
         }
         if (!this.line.done) {
-            window.requestAnimationFrame(this.animation);
+            window.requestAnimationFrame(this.initialDraw);
+        }
+    }
+
+    mouseOnDraw(tab) {
+        tab.update();
+        tab.draw();
+
+        if (!tab.done) {
+            window.requestAnimationFrame(() => this.mouseOnDraw(tab));
         }
     }
 
