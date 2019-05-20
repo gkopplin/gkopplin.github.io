@@ -11,7 +11,7 @@ class Header extends React.Component {
         this.colors = ["#7d7d7d", "#808080", "#838382", "#868686", "#858685"];
         this.state = {mouseX: 0, 
                       mouseY: 0,
-                      mouseColor: "#000000",
+                      mouseColor: "#0",
                       tabs: []};
     }
 
@@ -28,6 +28,17 @@ class Header extends React.Component {
                 this.setState({tabs: newTabs});
                 tab.done = false;
                 this.mouseOnDraw(tab);
+            }
+            if(tab.color === this.state.mouseColor &&
+                hex === "#0" && 
+                this.state.mouseColor !== "#0") {
+                let newTabs = this.state.tabs;
+                newTabs[idx].limit += 70;
+                newTabs[idx].posY += 130;
+                newTabs[idx].posX -= 131;
+                this.setState({tabs: newTabs});
+                tab.done = false;
+                this.mouseOffDraw(tab);
             }
         });
         this.setState({mouseColor: hex});
@@ -75,6 +86,15 @@ class Header extends React.Component {
 
         if (!tab.done) {
             window.requestAnimationFrame(() => this.mouseOnDraw(tab));
+        }
+    }
+
+    mouseOffDraw(tab) {
+        tab.reverseUpdate();
+        tab.reverseDraw();
+
+        if (!tab.done) {
+            window.requestAnimationFrame(() => this.mouseOffDraw(tab));
         }
     }
 
