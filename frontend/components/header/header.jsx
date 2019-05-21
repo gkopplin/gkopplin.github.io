@@ -115,11 +115,20 @@ class Header extends React.Component {
     }
 
     render() {
-
         return (
             <>
             <canvas width="900" height="400" id="canvas"></canvas>
-                <h1>{this.state.mouseX}<br></br>{this.state.mouseY}<br></br>{this.state.mouseColor}</h1>
+            <header>
+                <h1><a href="index.html" id="logo">Grant Kopplin</a></h1>
+
+                <nav id="nav">
+                    <a href="index.html" id="home">Home</a>
+                    <a href="about_me.html" id="about-me">About Me</a>
+                    <a href="portfolio.html" id="portfolio">Portfolio</a>
+                    <a href="resume.html" id="resume">Resume</a>
+                    <a href="contact.html" id="contact">Contact</a>
+                </nav>
+            </header>
             </>
         );
     }
