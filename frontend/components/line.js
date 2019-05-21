@@ -21,7 +21,7 @@ class Line {
         this.ctx.lineTo(this.posX, 100);
 
         this.ctx.globalCompositeOperation = "source-over";
-        this.ctx.fillStyle = "#f5f5f5";
+        this.ctx.fillStyle = "#f4f4f4";
         this.ctx.fill();
 
         this.ctx.closePath();
@@ -34,7 +34,7 @@ class Line {
         this.ctx.lineTo(this.posX, 135);
 
         this.ctx.globalCompositeOperation = "source-over";
-        this.ctx.fillStyle = "#f5f5f5";
+        this.ctx.fillStyle = "#f4f4f4";
         this.ctx.fill();
 
         this.ctx.closePath();
