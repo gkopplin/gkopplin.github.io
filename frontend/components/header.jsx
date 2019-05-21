@@ -26,7 +26,8 @@ class Header extends React.Component {
                 let newTabs = this.state.tabs;
                 newTabs[idx].limit += 50;
                 newTabs[idx].posY -= 10;
-                newTabs[idx].posX += 11;
+                newTabs[idx].posX += 10;
+                if(newTabs[idx].posX % 10 === 9) newTabs[idx].posX += 1;
                 this.setState({tabs: newTabs});
                 tab.done = false;
                 this.mouseOnDraw(tab);
@@ -70,7 +71,7 @@ class Header extends React.Component {
     initialDraw() {
         this.state.tabs.forEach(tab => {
             tab.update();
-            tab.draw();
+            if(!tab.done) tab.draw();
         });
 
         if (this.state.tabs.every(tab => tab.done)) {
