@@ -11,7 +11,7 @@ class Header extends React.Component {
         this.colors = ["#7d7d7d", "#808080", "#838382", "#868686", "#858685"];
         this.state = {mouseX: 0, 
                       mouseY: 0,
-                      mouseColor: "#0",
+                      mouseColor: "#f5f5f5",
                       tabs: []};
     }
 
@@ -19,7 +19,8 @@ class Header extends React.Component {
         this.setState({ mouseX: e.clientX, mouseY: e.clientY });
 
         const imgData = this.ctx.getImageData(this.state.mouseX, this.state.mouseY, 1, 1).data;
-        const hex = "#" + (this.rgbToHex(imgData[0], imgData[1], imgData[2]));
+        let hex = "#" + (this.rgbToHex(imgData[0], imgData[1], imgData[2]));
+        hex = hex === "#0" ? "#f5f5f5" : hex;
 
         this.state.tabs.forEach((tab, idx) => {
             if(tab.color === hex && this.state.mouseColor !== hex) {
@@ -33,8 +34,8 @@ class Header extends React.Component {
                 this.mouseOnDraw(tab);
             }
             if(tab.color === this.state.mouseColor &&
-                hex === "#0" && 
-                this.state.mouseColor !== "#0") {
+                hex === "#f5f5f5" && 
+                this.state.mouseColor !== "#f5f5f5") {
                 let newTabs = this.state.tabs;
                 newTabs[idx].limit -= 50;
                 newTabs[idx].posY += 10;
