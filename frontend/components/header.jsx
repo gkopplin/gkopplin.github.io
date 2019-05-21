@@ -12,10 +12,12 @@ class Header extends React.Component {
         this.state = {mouseX: 0, 
                       mouseY: 0,
                       mouseColor: "#f5f5f5",
-                      tabs: []};
+                      tabs: [],
+                      animating: false};
     }
 
     checkMousePos(e) {
+        if (this.state.animating) return;
         this.setState({ mouseX: e.clientX, mouseY: e.clientY });
 
         const imgData = this.ctx.getImageData(this.state.mouseX, this.state.mouseY, 1, 1).data;
@@ -68,6 +70,7 @@ class Header extends React.Component {
     }
 
     initialDraw() {
+        this.setState({animating: true});
         this.state.tabs.forEach(tab => {
             tab.update();
             if(!tab.done) tab.draw();
@@ -79,24 +82,32 @@ class Header extends React.Component {
         }
         if (!this.line.done) {
             window.requestAnimationFrame(this.initialDraw);
+        } else {
+            this.setState({animating: false});
         }
     }
 
     mouseOnDraw(tab) {
+        this.setState({ animating: true });
         tab.update();
         tab.draw();
 
         if (!tab.done) {
             window.requestAnimationFrame(() => this.mouseOnDraw(tab));
+        } else {
+            this.setState({ animating: false });
         }
     }
 
     mouseOffDraw(tab) {
+        this.setState({ animating: true });
         tab.reverseUpdate();
         tab.reverseDraw();
 
         if (!tab.done) {
             window.requestAnimationFrame(() => this.mouseOffDraw(tab));
+        } else {
+            this.setState({ animating: false });
         }
     }
 
