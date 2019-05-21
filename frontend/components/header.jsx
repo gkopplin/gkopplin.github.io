@@ -25,6 +25,8 @@ class Header extends React.Component {
             if(tab.color === hex && this.state.mouseColor !== hex) {
                 let newTabs = this.state.tabs;
                 newTabs[idx].limit += 50;
+                newTabs[idx].posY -= 10;
+                newTabs[idx].posX += 11;
                 this.setState({tabs: newTabs});
                 tab.done = false;
                 this.mouseOnDraw(tab);
@@ -33,9 +35,9 @@ class Header extends React.Component {
                 hex === "#0" && 
                 this.state.mouseColor !== "#0") {
                 let newTabs = this.state.tabs;
-                newTabs[idx].limit += 70;
-                newTabs[idx].posY += 130;
-                newTabs[idx].posX -= 131;
+                newTabs[idx].limit -= 50;
+                newTabs[idx].posY += 10;
+                newTabs[idx].posX -= 11;
                 this.setState({tabs: newTabs});
                 tab.done = false;
                 this.mouseOffDraw(tab);

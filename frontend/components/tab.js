@@ -8,13 +8,13 @@ class Tab {
     }
 
     update() {
-        if (this.posY + 8 < this.limit) {
-            this.posX -= 8;
+        if (this.posY + 10 < this.limit) {
+            this.posX -= 10;
         } else {
             this.done = true;
         }
-        if (this.posY + 8 < this.limit) {
-            this.posY += 8;
+        if (this.posY + 10 < this.limit) {
+            this.posY += 10;
         } else {
             this.done = true;
         }
@@ -28,7 +28,6 @@ class Tab {
         this.ctx.lineTo(this.posX + 130, this.posY);
         this.ctx.lineTo(this.posX, this.posY);
 
-        if (this.posY < 100) this.ctx.globalCompositeOperation = "destination-over";
         this.ctx.strokeStyle = this.color;
         this.ctx.fillStyle = this.color;
 
@@ -37,25 +36,24 @@ class Tab {
     }
 
     reverseUpdate() {
-        if (this.posY - 8 > this.limit) {
-            this.posX += 8;
+        if (this.posY - 10 > this.limit) {
+            this.posX += 10;
         } else {
             this.done = true;
         }
-        if (this.posY - 8 > this.limit) {
-            this.posY -= 8;
+        if (this.posY - 10 > this.limit) {
+            this.posY -= 10;
         } else {
             this.done = true;
         }
     }
 
     reverseDraw() {
-        debugger
         this.ctx.beginPath();
         this.ctx.moveTo(this.posX, this.posY);
         this.ctx.lineTo(this.posX - 10, this.posY + 10);
-        this.ctx.lineTo(this.posX + 120, this.posY + 10);
-        this.ctx.lineTo(this.posX + 130, this.posY);
+        this.ctx.lineTo(this.posX + 122, this.posY + 10);
+        this.ctx.lineTo(this.posX + 132, this.posY);
         this.ctx.lineTo(this.posX, this.posY);
 
         this.ctx.globalCompositeOperation = "source-over";
