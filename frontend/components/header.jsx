@@ -55,11 +55,11 @@ class Header extends React.Component {
         const canvas = document.getElementById('canvas');
         this.ctx = canvas.getContext('2d');
         this.line = new Line({ posX: 100, ctx: this.ctx });
-        this.setState({tabs: [new Tab({ limit: 100, posX: 540, posY: -250, ctx: this.ctx, color: this.colors[0]}),
-            new Tab({ limit: 50, posX: 630, posY: -200, ctx: this.ctx, color: this.colors[1] }),
-            new Tab({ limit: 220, posX: 720, posY: -150, ctx: this.ctx, color: this.colors[2] }),
-            new Tab({ limit: 140, posX: 960, posY: -250, ctx: this.ctx, color: this.colors[3] }),
-            new Tab({ limit: 110, posX: 1000, posY: -150, ctx: this.ctx, color: this.colors[4] })]});
+        this.setState({tabs: [new Tab({ limit: 220, posX: 540, posY: -250, ctx: this.ctx, color: this.colors[0]}),
+            new Tab({ limit: 170, posX: 630, posY: -200, ctx: this.ctx, color: this.colors[1] }),
+            new Tab({ limit: 340, posX: 720, posY: -150, ctx: this.ctx, color: this.colors[2] }),
+            new Tab({ limit: 260, posX: 960, posY: -250, ctx: this.ctx, color: this.colors[3] }),
+            new Tab({ limit: 230, posX: 1000, posY: -150, ctx: this.ctx, color: this.colors[4] })]});
 
         window.requestAnimationFrame(this.initialDraw);
         canvas.onmousemove = this.checkMousePos;

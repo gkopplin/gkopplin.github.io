@@ -23,8 +23,8 @@ class Tab {
     draw() {
         this.ctx.beginPath();
         this.ctx.moveTo(this.posX, this.posY);
-        this.ctx.lineTo(this.posX - 130, this.posY + 130);
-        this.ctx.lineTo(this.posX, this.posY + 130);
+        this.ctx.lineTo(this.posX - 10, this.posY + 10);
+        this.ctx.lineTo(this.posX + 120, this.posY + 10);
         this.ctx.lineTo(this.posX + 130, this.posY);
         this.ctx.lineTo(this.posX, this.posY);
 
@@ -50,11 +50,12 @@ class Tab {
     }
 
     reverseDraw() {
+        debugger
         this.ctx.beginPath();
         this.ctx.moveTo(this.posX, this.posY);
         this.ctx.lineTo(this.posX - 10, this.posY + 10);
-        this.ctx.lineTo(this.posX + 130, this.posY + 10);
-        this.ctx.lineTo(this.posX + 140, this.posY);
+        this.ctx.lineTo(this.posX + 120, this.posY + 10);
+        this.ctx.lineTo(this.posX + 130, this.posY);
         this.ctx.lineTo(this.posX, this.posY);
 
         this.ctx.globalCompositeOperation = "source-over";
