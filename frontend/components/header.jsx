@@ -20,7 +20,6 @@ class Header extends React.Component {
 
         const imgData = this.ctx.getImageData(this.state.mouseX, this.state.mouseY, 1, 1).data;
         let hex = "#" + (this.rgbToHex(imgData[0], imgData[1], imgData[2]));
-        hex = hex === "#0" ? "#f5f5f5" : hex;
 
         this.state.tabs.forEach((tab, idx) => {
             if(tab.color === hex && this.state.mouseColor !== hex) {
@@ -34,8 +33,7 @@ class Header extends React.Component {
                 this.mouseOnDraw(tab);
             }
             if(tab.color === this.state.mouseColor &&
-                hex === "#f5f5f5" && 
-                this.state.mouseColor !== "#f5f5f5") {
+                hex !== tab.color) {
                 let newTabs = this.state.tabs;
                 newTabs[idx].limit -= 50;
                 newTabs[idx].posY += 10;
