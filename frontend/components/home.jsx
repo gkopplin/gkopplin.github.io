@@ -8,7 +8,7 @@ export default props => {
         <Header/>
 
         <div className="title-page">
-            <h1 className="title">Grant <br/>Kopplin</h1>
+            <h2 className="title">Grant <br/>Kopplin</h2>
             <h2>Full Stack Software Engineer<br/> with experience in React, Redux, and Rails <br/> Based in New York City</h2>
         </div>
 

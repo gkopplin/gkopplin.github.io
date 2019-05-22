@@ -91,6 +91,7 @@ class Header extends React.Component {
     }
 
     mouseOnDraw(tab) {
+        document.body.style.cursor = 'pointer';
         this.setState({ animating: true });
         tab.update();
         tab.draw();
@@ -103,6 +104,7 @@ class Header extends React.Component {
     }
 
     mouseOffDraw(tab) {
+        document.body.style.cursor = 'auto';
         this.setState({ animating: true });
         tab.reverseUpdate();
         tab.reverseDraw();
