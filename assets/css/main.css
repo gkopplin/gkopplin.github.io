@@ -108,7 +108,7 @@ img {
 	margin-left: 60px;
 }
 
-.projects {
+.centered-content {
 	display: flex;
 	justify-content: center;
 	padding-bottom: 20px;
@@ -139,4 +139,11 @@ ul {
 .skills {
 	display: flex;
 	justify-content: center;
+}
+
+p {
+	width: 70%;
+	font-size: 120%;
+	color: grey;
+	margin:0;
 }
