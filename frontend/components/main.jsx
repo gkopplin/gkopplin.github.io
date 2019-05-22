@@ -6,7 +6,7 @@ import Footer from './footer';
 export default props => {
     return (
         <>
-        <Header/>
+        <Header history={props.history}/>
         <Content history = {props.history} />
         <Footer/>
         </>

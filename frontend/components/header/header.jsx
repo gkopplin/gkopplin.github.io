@@ -9,7 +9,9 @@ class Header extends React.Component {
         this.initialDraw = this.initialDraw.bind(this);
         this.mouseOnDraw = this.mouseOnDraw.bind(this);
         this.checkMousePos = this.checkMousePos.bind(this);
+        this.redirect = this.redirect.bind(this);
         this.colors = ["#7d7d7d", "#808080", "#838382", "#868686", "#858685"];
+        this.links = ["/", "/about-me", "/portfolio", "/resume", "/contact"];
         this.state = {mouseX: 0, 
                       mouseY: 0,
                       mouseColor: "#f5f5f5",
@@ -117,10 +119,18 @@ class Header extends React.Component {
         }
     }
 
+    redirect() {
+        this.state.tabs.forEach((tab, idx) => {
+            if (tab.color === this.state.mouseColor) {
+                this.props.history.push(this.links[idx]);
+            }
+        });
+    }
+
     render() {
         return (
             <header>
-                <canvas width="900" height="400" id="canvas"></canvas>
+                <canvas width="900" height="400" id="canvas" onClick={this.redirect}></canvas>
                 <Link to="/" className="header-logo"><h3>Grant Kopplin</h3></Link>
 
                 <nav id="nav">
