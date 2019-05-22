@@ -64,6 +64,8 @@ h1 {
 	text-decoration: none;
 	font-weight: bolder;
 	text-align: center;
+	margin-top: 40px;
+	margin-bottom: 40px;
 }
 
 .header-logo {
@@ -92,16 +94,45 @@ img {
 
 .project-container {
 	width: 300px;
-	margin: 60px;
+}
+
+.project-container:first {
+	margin-right: 60px;
+}
+
+.project-container:last-child {
+	margin-left: 60px;
 }
 
 .projects {
 	display: flex;
 	justify-content: center;
+	border-bottom: solid 1px lightgray;
 }
 
 .project-image {
 	height: 200px;
 	display: flex;
 	align-items: center;
+}
+
+li > img {
+	width: 100px;
+	margin: 20px;
+}
+
+ul {
+	list-style: none;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	width: 900px;
+	padding: 0;
+	margin: 0;
+}
+
+.skills {
+	display: flex;
+	justify-content: center;
 }

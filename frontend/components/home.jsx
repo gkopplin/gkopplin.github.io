@@ -54,22 +54,20 @@ export default props => {
             </div>
         </div>
 
-        <section id="skills">
-            <section>
-                <h1>Technical Skills</h1>
-                <ul className="skills">
-                    <li><img src="./images/skills/javascript.png" alt=""/></li>
-                    <li><img src="./images/skills/rails.png" alt=""/></li>
-                    <li><img src="./images/skills/ruby.png" alt=""/></li>
-                    <li><img src="./images/skills/react.png" alt=""/></li>
-                    <li><img src="./images/skills/redux.png" alt=""/></li>
-                    <li><img src="./images/skills/sql.jpg" alt=""/></li>
-                    <li><img src="./images/skills/git.png" alt=""/></li>
-                    <li><img src="./images/skills/aws.png" alt=""/></li>
-                    <li><img src="./images/skills/html.png" alt=""/></li>
-                    <li><img src="./images/skills/css.png" alt=""/></li>
-                </ul>
-            </section>
+        <h1>Technical Skills</h1>
+        <section className="skills">
+            <ul>
+                <li><img src="./images/skills/javascript.png" alt=""/></li>
+                <li><img src="./images/skills/rails.png" alt=""/></li>
+                <li><img src="./images/skills/ruby.png" alt=""/></li>
+                <li><img src="./images/skills/react.png" alt=""/></li>
+                <li><img src="./images/skills/redux.png" alt=""/></li>
+                <li><img src="./images/skills/sql.jpg" alt=""/></li>
+                <li><img src="./images/skills/git.png" alt=""/></li>
+                <li><img src="./images/skills/html.png" alt=""/></li>
+                <li><img src="./images/skills/css.png" alt=""/></li>
+                <li><img src="./images/skills/aws.png" alt=""/></li>
+            </ul>
         </section>
         </>
     );
