@@ -18,7 +18,7 @@ class Header extends React.Component {
 
     checkMousePos(e) {
         if (this.state.animating) return;
-        this.setState({ mouseX: e.clientX, mouseY: e.clientY });
+        this.setState({ mouseX: e.offsetX, mouseY: e.clientY });
 
         const imgData = this.ctx.getImageData(this.state.mouseX, this.state.mouseY, 1, 1).data;
         let hex = "#" + (this.rgbToHex(imgData[0], imgData[1], imgData[2]));
