@@ -1,11 +1,8 @@
 import React from 'react';
-import Header from './header/header';
 
 export default props => {
     return (
         <>
-
-        <Header/>
 
         <div className="title-page">
             <h2 className="title">Grant <br/>Kopplin</h2>

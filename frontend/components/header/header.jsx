@@ -1,6 +1,7 @@
 import React from 'react';
 import Line from './line';
 import Tab from './tab';
+import {Link} from 'react-router-dom';
 
 class Header extends React.Component {
     constructor(props) {
@@ -120,11 +121,11 @@ class Header extends React.Component {
         return (
             <header>
                 <canvas width="900" height="400" id="canvas"></canvas>
-                <a href="index.html" className="header-logo"><h3>Grant Kopplin</h3></a>
+                <Link to="/" className="header-logo"><h3>Grant Kopplin</h3></Link>
 
                 <nav id="nav">
-                    <a href="index.html" id="home"><h3>Home</h3></a>
-                    <a href="about_me.html" id="about-me"><h3>About Me</h3></a>
+                    <Link to="/" id="home"><h3>Home</h3></Link>
+                    <Link to="/about-me" id="about-me"><h3>About Me</h3></Link>
                     <a href="portfolio.html" id="portfolio"><h3>Portfolio</h3></a>
                     <a href="resume.html" id="resume"><h3>Resume</h3></a>
                     <a href="contact.html" id="contact"><h3>Contact</h3></a>
