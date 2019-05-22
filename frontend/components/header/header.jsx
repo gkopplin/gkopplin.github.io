@@ -116,20 +116,18 @@ class Header extends React.Component {
 
     render() {
         return (
-            <>
-            <canvas width="900" height="400" id="canvas"></canvas>
             <header>
-                <h1><a href="index.html" id="logo">Grant Kopplin</a></h1>
+                <canvas width="900" height="400" id="canvas"></canvas>
+                <a href="index.html" className="header-logo"><h3>Grant Kopplin</h3></a>
 
                 <nav id="nav">
-                    <a href="index.html" id="home">Home</a>
-                    <a href="about_me.html" id="about-me">About Me</a>
-                    <a href="portfolio.html" id="portfolio">Portfolio</a>
-                    <a href="resume.html" id="resume">Resume</a>
-                    <a href="contact.html" id="contact">Contact</a>
+                    <a href="index.html" id="home"><h3>Home</h3></a>
+                    <a href="about_me.html" id="about-me"><h3>About Me</h3></a>
+                    <a href="portfolio.html" id="portfolio"><h3>Portfolio</h3></a>
+                    <a href="resume.html" id="resume"><h3>Resume</h3></a>
+                    <a href="contact.html" id="contact"><h3>Contact</h3></a>
                 </nav>
             </header>
-            </>
         );
     }
 };

@@ -8,18 +8,21 @@ export default props => {
         <Header/>
 
         <div className="title-page">
-            <h1>Grant Kopplin</h1>
-            <p>Full Stack Software Engineer with experience in React, Redux, and Rails. Based in New York City</p>
+            <h1 className="title">Grant <br/>Kopplin</h1>
+            <h2>Full Stack Software Engineer<br/> with experience in React, Redux, and Rails <br/> Based in New York City</h2>
         </div>
+
+        <h1>Featured Projects</h1>
 
         <div className="projects">
 
-            <h1>Featured Projects</h1>
-
-            <div id="grumblr-container">
+            <div className="project-container">
                 <section>
-                    <a href="https://grumblr-app.herokuapp.com" className="bordered-feature-image"><img src="images/grumblr.png"
-                        alt="" id="grumblr-screenshot" /></a>
+                    <div className="project-image">
+                        <a href="https://grumblr-app.herokuapp.com" >
+                            <img src="images/grumblr.png" alt="" />
+                        </a>
+                    </div>
                     <h2>Grumblr</h2>
                     <a href="https://grumblr-app.herokuapp.com">Live</a> | <a
                         href="https://github.com/gkopplin/grumblr">Github</a>
@@ -31,10 +34,13 @@ export default props => {
                 </section>
 
             </div>
-            <div id="maze-escape-container">
+            <div className="project-container">
                 <section>
-                    <a href="https://gkopplin.github.io/maze-escape/" className="bordered-feature-image" id="maze"><img
-                        src="images/maze-escape.png" alt="" /></a>
+                    <div className="project-image">
+                        <a href="https://gkopplin.github.io/maze-escape/" >
+                            <img src="images/maze-escape.png" alt="" />
+                        </a>
+                    </div>
                     <h2>Maze Escape</h2>
                     <a href="https://gkopplin.github.io/maze-escape/">Live</a> | <a
                         href="https://github.com/gkopplin/maze-escape">Github</a>
@@ -50,9 +56,7 @@ export default props => {
 
         <section id="skills">
             <section>
-                <header>
-                    <h1>Technical Skills</h1>
-                </header>
+                <h1>Technical Skills</h1>
                 <ul className="skills">
                     <li><img src="./images/skills/javascript.png" alt=""/></li>
                     <li><img src="./images/skills/rails.png" alt=""/></li>
