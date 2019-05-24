@@ -136,7 +136,7 @@ class Header extends React.Component {
                 <nav id="nav">
                     <Link to="/" id="home"><h3>Home</h3></Link>
                     <Link to="/about-me" id="about-me"><h3>About Me</h3></Link>
-                    <a href="portfolio.html" id="portfolio"><h3>Portfolio</h3></a>
+                    <Link to="/portfolio" id="portfolio"><h3>Portfolio</h3></Link>
                     <a href="resume.html" id="resume"><h3>Resume</h3></a>
                     <a href="contact.html" id="contact"><h3>Contact</h3></a>
                 </nav>

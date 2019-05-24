@@ -5,8 +5,7 @@ import Main from './components/main';
 const App = () => {
     return (
         <Switch>
-            <Route exact path="/" component={Main}/>
-            <Route exact path="/about-me" component={Main}/>
+            <Route path="/" component={Main}/>
         </Switch>
     );
 }

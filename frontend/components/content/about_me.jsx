@@ -11,7 +11,7 @@ export default props => {
 
         <h1>Background</h1>
             <div className="centered-content">
-                <p>
+                <p className="set-width">
                     I was first introduced to coding through conducting social science research and working with statistical programs like 
                     Stata and R. Right away, I knew that I wanted to pursue a career involving programming. I love the problem solving 
                     aspects of coding and the process of working through challenging puzzles to get to a working solution. In particular, 

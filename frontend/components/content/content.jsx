@@ -1,6 +1,7 @@
 import React from 'react';
 import Home from './home';
 import AboutMe from './about_me';
+import Portfolio from './portfolio';
 
 export default props => {
     if (props.history.location.pathname === '/') {
@@ -10,6 +11,10 @@ export default props => {
     } else if (props.history.location.pathname === "/about-me") {
         return (
             <AboutMe />
+        );
+    } else if (props.history.location.pathname === "/portfolio") {
+        return (
+            <Portfolio />
         );
     }
 };

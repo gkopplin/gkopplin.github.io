@@ -64,10 +64,11 @@ h1 {
 	text-decoration: none;
 	font-weight: bolder;
 	text-align: center;
-	margin-top: 40px;
-	margin-bottom: 40px;
+	margin-top: 10px;
+	margin-bottom: 10px;
 	border-top: solid 1px lightgray;
 	padding-top: 40px;
+	font-size: 250%;
 }
 
 .header-logo {
@@ -142,8 +143,36 @@ ul {
 }
 
 p {
-	width: 70%;
 	font-size: 120%;
 	color: grey;
 	margin:0;
+}
+
+.set-width{
+	width: 70%;
+}
+
+.portfolio-img {
+	margin-bottom: 20px;
+}
+
+.portfolio-project {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+span {
+	margin-bottom: 20px;
+}
+
+.features {
+	margin-top: 15px;
+	margin-bottom: 10px;
+}
+
+.features > li {
+	margin-top: 5px;
+	margin-bottom: 5px;
 }
