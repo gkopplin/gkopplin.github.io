@@ -22,8 +22,10 @@ export default props => {
                         </a>
                     </div>
                     <h2>Grumblr</h2>
-                    <a href="https://grumblr-app.herokuapp.com">Live</a> | <a
-                        href="https://github.com/gkopplin/grumblr">Github</a>
+                    <div className="home-links">
+                        <a href="https://grumblr-app.herokuapp.com">Live</a> | <a
+                            href="https://github.com/gkopplin/grumblr">Github</a>
+                    </div>
                     <p>
                         A full-stack Tumblr clone for grumpy people built using PostgreSQL, Rails, and React/Redux. Supports
                         posts
@@ -40,8 +42,10 @@ export default props => {
                         </a>
                     </div>
                     <h2>Maze Escape</h2>
-                    <a href="https://gkopplin.github.io/maze-escape/">Live</a> | <a
-                        href="https://github.com/gkopplin/maze-escape">Github</a>
+                        <div className="home-links">
+                        <a href="https://gkopplin.github.io/maze-escape/">Live</a> | <a
+                            href="https://github.com/gkopplin/maze-escape">Github</a>
+                    </div>
                     <p>
                         A retro, turn-based JavaScript game where users must escape mazes without being caught by AI enemies.
                         Built

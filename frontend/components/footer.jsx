@@ -2,8 +2,8 @@ import React from 'react';
 
 export default props => {
     return (
-        <div id="copyright">
+        <footer>
             &copy; Grant Kopplin 2019
-		</div>
+		</footer>
     );
 };

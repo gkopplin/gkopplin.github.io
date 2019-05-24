@@ -95,6 +95,19 @@ export default props => {
                                 </p>
                             </li>
                         </ul>
+
+                        <h1>Portfolio Site</h1>
+                        <div className="portfolio-project">
+                            <span>
+                            <a href="https://github.com/gkopplin/gkopplin.github.io">Github</a>
+                            </span>
+                        </div>
+
+                        <p>
+                        I designed and built the site that you are currently visiting using React and Redux. I built the nav bar using HTML5 Canvas. 
+                        I chose to use React to implement this site to provide the "single-page" experience that is expected on modern web pages. 
+                        This also prevents the initial animation of the canvas element from triggering whenever the user navigates to a new page.
+                        </p>
                     </div>
                 </div>
         </section>
