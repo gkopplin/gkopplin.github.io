@@ -1,1 +1,0 @@
-[Live Link](https://gkopplin.github.io)
