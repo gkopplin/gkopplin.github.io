@@ -1,0 +1,153 @@
+<!DOCTYPE HTML>
+<!--
+	Halcyonic by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Portfolio</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="subpage">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<section id="header">
+					<div class="container">
+						<div class="row">
+							<div class="col-12">
+				
+								<!-- Logo -->
+								<h1><a href="index.html" id="logo">Grant Kopplin</a></h1>
+				
+								<!-- Nav -->
+								<nav id="nav">
+									<a href="index.html">Home</a>
+									<a href="about_me.html">About Me</a>
+									<a href="portfolio.html">Portfolio</a>
+									<a href="resume.html">Resume</a>
+									<a href="contact.html">Contact</a>
+								</nav>
+				
+							</div>
+						</div>
+					</div>
+				</section>
+
+			<!-- Content -->
+				<section id="content">
+					<div class="container">
+						<div class="row center">
+							<div class="col-9 col-12-medium">
+
+								<!-- Main Content -->
+									<section>
+										<!-- <div class="col-3 col-6-medium col-12-small" id="grumblr-container"> -->
+										
+											<!-- Feature #1 -->
+											<a href="https://grumblr-app.herokuapp.com" class="bordered-feature-image"><img src="images/grumblr.png" alt="" id="grumblr-screenshot" /></a>
+											<h2>Grumblr</h2>
+											<a href="https://grumblr-app.herokuapp.com">Live</a> | <a href="https://github.com/gkopplin/grumblr">Github</a>
+											<p>
+												A full-stack Tumblr clone for grumpy people built using PostgreSQL, Rails, and React/Redux. Cloud store is implemented to improve the scaling of the application using the AWS S3 API. Supports posts
+												of many media types including text, photo, video, audio, and links.
+											</p>
+											<h1>Features:</h1>
+											<ul>
+												<li><h3>1. Splash Page</h3>
+													<p>
+														The welcome page of Grumblr features a sliding carousel of pages, which rotates as the user scrolls or clicks the scroll
+														icons. DOM event listeners change the classes of HTML elements when the user scrolls or clicks an icon. The updated
+														classes contain keyframes animations which cause certain elements to slide or fade depending on the current position of
+														the carousel and the direction of the scroll. <br>
+														For instance, if the user were viewing the second splash page and scrolled back up to the first, the direction key in
+														the splash React component state would be changed to "up2-1" and the props of the individual splash pages would be
+														updated accordingly. Within each splash page, the root HTML element is set to props.direction. The CSS class for up2-1
+														contains a keyframes animation with a translateY transformation from -100% to 0%.
+													</p>
+												</li>
+												<li><h3>2. Search</h3>
+													<p>
+														In the header of each page (except the splash page), there is a search bar which users can use to find users. When the
+														user types into the search bar and adds characters to the search form element, a modal component is opened which
+														contains search results. For each character added to the form, relevant users are fetched from the backend and the
+														search results are re-rendered. Users can then click users to redirect to their profile page, or press enter to redirect
+														to the first user listed in the search results.
+													</p>
+												</li>
+												<li><h3>3. Follows</h3>
+													<p>
+														The follows joins table links followers with the users they follow. In order to limit the current user's dashboard to
+														posts from users they follow, AJAX requests are sent to the backend and the follows joins table is queried. Similarly,
+														the association between users and their followers is used to populate the followers and following pages with the correct
+														users.
+													</p>
+												</li>
+											</ul>
+										
+										<!-- </div> -->
+										<!-- <div class="col-3 col-6-medium col-12-small" id="maze-escape-container"> -->
+										
+											<!-- Feature #2 -->
+
+											<a href="https://gkopplin.github.io/maze-escape/" class="bordered-feature-image"><img src="images/maze-escape.png" alt="" /></a>
+											<h2>Maze Escape</h2>
+											<a href="https://gkopplin.github.io/maze-escape/">Live</a> | <a href="https://github.com/gkopplin/maze-escape">Github</a>
+											<p>
+												A retro, turn-based JavaScript game where users must escape mazes without being caught by AI enemies. Built
+												using HTML5 Canvas.
+											</p>
+											<h1>Features:</h1>
+											<ul>
+												<li><h3>1. Level Progression</h3>
+													<p>
+														When a user reaches the exit of a level, the Game object will hide the HTML Canvas element and show the root div element
+														(by modifying the classes of each). The appropriate image is also pushed into the inner HTML of the root element. A DOM
+														keypress event listener is added to re-show the HTML Canvas element when the user is ready to progress to the next
+														level. A similar system is set up for when the users loses a level or wins the game.
+													</p>
+												</li>
+												<li><h3>2. Collision Detection</h3>
+													<p>
+														If/else logic is used to determine whether a given move is valid based on the characters position and surrounding
+														obstacles. For any given move, collisions are detected using the x position of the character and the y position plus the
+														height of the character sprite (since characters are able to stand in front of walls, but cannot walk through them).
+														Since the game is implemented on a 50x50 grid system, characters will always be a given distance from adjacent walls.
+														Each time a character moves, the array of walls is iterated over to confirm that no wall blocks the characters path. In
+														addition to the original position of the character, the function for determining valid moves also takes a new position
+														that the character is attempting to travel to. The values of the new position and the orientation of the wall and used
+														to determine if the character is attempting to walk through a wall.
+													</p>
+												</li>
+											</ul>
+										<!-- </div> -->
+									</section>
+
+							</div>
+							
+						</div>
+					</div>
+				</section>
+
+			<!-- Footer -->
+				
+
+			<!-- Copyright -->
+				<div id="copyright">
+					&copy; Grant Kopplin, Design: <a href="http://html5up.net">HTML5 UP</a>
+				</div>
+
+		</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

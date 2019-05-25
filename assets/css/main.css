@@ -1,0 +1,207 @@
+body {
+	background: #f5f5f5;
+	font-family: sans-serif;
+}
+
+canvas {
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+a {
+	color: #AFAFAE;
+	text-transform: uppercase;
+	text-decoration: none;
+	font-weight: bolder;
+}
+
+nav > a {
+	color: #f4f4f4;
+	font-size: 110%;
+	z-index: 2;
+}
+
+nav {
+	display: flex;
+	position: absolute;
+	top: 108px;
+    right: 61px;
+}
+
+#home {
+	margin-right: 67px;
+}
+
+#about-me {
+	margin-right: 46px;
+}
+
+#resume {
+	margin-left: 47px;
+}
+
+#contact {
+	margin-left: 62px;
+}
+
+header {
+	height: 190px;
+}
+
+h3 {
+	margin: 0px;
+	font-size: 100%;
+}
+
+h2 {
+	color: gray;
+	margin: 0px;
+}
+
+h1 {
+	text-transform: uppercase;
+	text-decoration: none;
+	font-weight: bolder;
+	text-align: center;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	border-top: solid 1px lightgray;
+	padding-top: 40px;
+	font-size: 250%;
+}
+
+.header-logo {
+	color: #828282;
+	font-size: 150%;
+	text-transform: uppercase;
+	text-decoration: none;
+	font-weight: bolder;
+	margin-top: 5px;
+}
+
+.title {
+	color: black;
+	text-transform: uppercase;
+	font-size: 500%;	
+	margin-bottom: 20px;
+	text-align: left;
+}
+
+.title-page {
+	margin-left: 80px;
+	margin-bottom: 100px;
+}
+
+img {
+	width: 100%;
+}
+
+.project-container {
+	width: 300px;
+}
+
+.project-container:first {
+	margin-right: 60px;
+}
+
+.project-container:last-child {
+	margin-left: 60px;
+}
+
+.centered-content {
+	display: flex;
+	justify-content: center;
+	padding-bottom: 20px;
+}
+
+.project-image {
+	height: 200px;
+	display: flex;
+	align-items: center;
+}
+
+.home-links {
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+li > img {
+	width: 100px;
+	margin: 20px;
+}
+
+ul {
+	list-style: none;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	padding: 0;
+	margin: 0;
+}
+
+.skills {
+	display: flex;
+	justify-content: center;
+}
+
+.skills > ul {
+	width: 900px;
+}
+
+p {
+	font-size: 120%;
+	color: grey;
+	margin:0;
+}
+
+.set-width{
+	width: 70%;
+}
+
+.portfolio-img {
+	margin-bottom: 20px;
+}
+
+.portfolio-project {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+span {
+	margin-bottom: 20px;
+}
+
+.features {
+	margin-top: 15px;
+	margin-bottom: 10px;
+}
+
+.features > li {
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+.pdf {
+	width: 100%;
+	height: 700px;
+}
+
+.contact{
+	flex-direction: column;
+}
+
+.contact > li {
+	margin: 10px;
+}
+
+.contact-link {
+	font-size: 150%;
+}
+
+footer {
+	margin-top: 3px;
+}
