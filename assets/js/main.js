@@ -1,51 +1,35 @@
-/*
-	Halcyonic by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-*/
+// import Tab from '.../../components/header/line.js
+// import Line from './line.js';
 
-(function($) {
+// document.addEventListener("DOMContentLoaded", () => {
+//     const canvas = document.getElementsByTagName('canvas')[0];
+//     const ctx = canvas.getContext('2d');
+//     const tabs = [new Tab({ limit: 100, posX: 540, posY: -250, ctx: ctx }),
+//                    new Tab({ limit: 50, posX: 630, posY: -200, ctx: ctx }),
+//                    new Tab({limit: 220, posX: 720, posY: -150, ctx: ctx}),
+//                    new Tab({ limit: 140, posX: 960, posY: -250, ctx: ctx }),
+//                    new Tab({ limit: 110, posX: 1000, posY: -150, ctx: ctx })];
+//     const line = new Line({posX: 100, ctx});
 
-	var $window = $(window),
-		$body = $('body');
+//     function animation() {
+//         tabs.forEach(tab => {
+//             tab.update();
+//             tab.draw();
+//         });
+        
+//         if (tabs.every(tab => tab.done)){
+//             line.update();
+//             line.draw();
+//         }
+//         if(!line.done) {
+//             window.requestAnimationFrame(animation);
+//         }
+//     }
 
-	// Breakpoints.
-		breakpoints({
-			xlarge:  [ '1281px',  '1680px' ],
-			large:   [ '981px',   '1280px' ],
-			medium:  [ '737px',   '980px'  ],
-			small:   [ null,      '736px'  ]
-		});
 
-	// Nav.
+    
 
-		// Title Bar.
-			$(
-				'<div id="titleBar">' +
-					'<a href="#navPanel" class="toggle"></a>' +
-					'<span class="title">' + $('#logo').html() + '</span>' +
-				'</div>'
-			)
-				.appendTo($body);
+    
 
-		// Panel.
-			$(
-				'<div id="navPanel">' +
-					'<nav>' +
-						$('#nav').navList() +
-					'</nav>' +
-				'</div>'
-			)
-				.appendTo($body)
-				.panel({
-					delay: 500,
-					hideOnClick: true,
-					hideOnSwipe: true,
-					resetScroll: true,
-					resetForms: true,
-					side: 'left',
-					target: $body,
-					visibleClass: 'navPanel-visible'
-				});
-
-})(jQuery);
+//     window.requestAnimationFrame(animation);
+// });
