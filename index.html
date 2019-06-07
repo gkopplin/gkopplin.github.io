@@ -6,8 +6,123 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<link rel="shortcut icon" type="image/png" href="images/favicon.png" />
-		<script src="static/bundle.js"></script>
+		<!-- <script src="static/bundle.js"></script> -->
 	</head>
 	<body>
-		<div id='root'></div>	
+		<div className="title-page">
+			<h2 className="title">Grant <br />Kopplin</h2>
+			<h2>Full Stack Software Engineer<br /> with experience in React, Redux, and Rails <br /> Based in New York City</h2>
+		</div>
+
+		<h1>About Me</h1>
+		<div className="centered-content">
+			<p className="set-width">
+				I was first introduced to coding through conducting social science research and working with statistical
+				programs like
+				Stata and R. Right away, I knew that I wanted to pursue a career involving programming. I love the problem
+				solving
+				aspects of coding and the process of working through challenging puzzles to get to a working solution. In
+				particular,
+				I'm drawn to full stack web development because I love combining disperate libraries and frameworks to implement
+				an
+				idea and create a functional, aesthetically pleasing final product.<br /><br />
+		
+				Through working in reproductive health research for three years, I have honed my skills in data management /
+				analysis and
+				programming more broadly.I have built a full - stack clone of Tumblr using Ruby on Rails, postgreSQL, and React
+				/ Redux.I
+				made a turn - based game using Javascript and HTML5 Canvas.
+			</p>
+		</div>
+
+		<h1>Technical Skills</h1>
+		<section className="skills">
+			<ul>
+				<li><img src="./images/skills/javascript.png" alt="" /></li>
+				<li><img src="./images/skills/rails.png" alt="" /></li>
+				<li><img src="./images/skills/ruby.png" alt="" /></li>
+				<li><img src="./images/skills/react.png" alt="" /></li>
+				<li><img src="./images/skills/redux.png" alt="" /></li>
+				<li><img src="./images/skills/sql.jpg" alt="" /></li>
+				<li><img src="./images/skills/git.png" alt="" /></li>
+				<li><img src="./images/skills/html.png" alt="" /></li>
+				<li><img src="./images/skills/css.png" alt="" /></li>
+				<li><img src="./images/skills/aws.png" alt="" /></li>
+			</ul>
+		</section>
+
+		<div className="centered-content">
+			<div className="set-width">
+				<h1>Grumblr</h1>
+		
+				<div className="portfolio-project">
+					<span>
+						<a href="https://grumblr-app.herokuapp.com">Live</a> | <a
+							href="https://github.com/gkopplin/grumblr">Github</a>
+					</span>
+					<div className="set-width portfolio-img">
+						<a href="https://grumblr-app.herokuapp.com"><img src="images/grumblr.png" alt="" /></a>
+					</div>
+				</div>
+		
+				<p>
+					A full-stack Tumblr clone for grumpy people built using PostgreSQL, Rails, and React/Redux. Cloud storage is
+					implemented to improve the scaling of the application using the AWS S3 API. Supports posts
+					of many media types including text, photo, video, audio, and links.
+				</p>
+				
+				<h1>Maze Escape</h1>
+				<div className="portfolio-project">
+					<span>
+						<a href="https://gkopplin.github.io/maze-escape/">Live</a> | <a
+							href="https://github.com/gkopplin/maze-escape">Github</a>
+					</span>
+					<div className="set-width portfolio-img">
+						<a href="https://gkopplin.github.io/maze-escape/"><img src="images/maze-escape.png" alt="" /></a>
+					</div>
+				</div>
+		
+				<p>
+					A retro, turn-based JavaScript game where users must escape mazes without being caught by AI enemies. Built
+					using HTML5 Canvas.
+				</p>
+		
+				<h1>Portfolio Site</h1>
+				<div className="portfolio-project">
+					<span>
+						<a href="https://github.com/gkopplin/gkopplin.github.io">Github</a>
+					</span>
+				</div>
+		
+				<p>
+					I designed and built the site that you are currently visiting using React and Redux. I built the nav bar
+					using HTML5 Canvas.
+					I chose to use React to implement this site to provide the "single-page" experience that is expected on
+					modern web pages.
+					This also prevents the initial animation of the canvas element from triggering whenever the user navigates
+					to a new page.
+				</p>
+			</div>
+		</div>
+
+		<h1>Contact Information</h1>
+		<ul className="contact">
+			<li>
+				<a href="https://www.linkedin.com/in/grant-kopplin/" className="contact-link">LinkedIn</a>
+			</li>
+			<li>
+				<a href="https://github.com/gkopplin" className="contact-link">Github</a>
+			</li>
+			<li>
+				<h2>Phone: 918-606-2738</h2>
+			</li>
+			<li>
+				<h2>Email: <a href="mailto:grant.kopplin@gmail.com">grant.kopplin@gmail.com</a> </h2>
+			</li>
+		</ul>
+
+		<footer>
+			&copy; Grant Kopplin 2019
+		</footer>
+	</body>
 </html>
