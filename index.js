@@ -1,8 +1,10 @@
-import Line from 'line';
-import Tab from 'tab';
+import Line from './line';
+import Tab from './tab';
 
 class Header {
     constructor(ctx) {
+        this.colors = ["#7d7d7d", "#808080", "#838382", "#868686", "#858685"];
+        this.links = ["/", "/about-me", "/portfolio", "/resume", "/contact"];
         this.ctx = ctx;
         this.line = new Line({ posX: 100, ctx: this.ctx });
         this.tabs = [new Tab({ limit: 220, posX: 540, posY: -250, ctx: this.ctx, color: this.colors[0] }),
@@ -120,7 +122,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let header = new Header(ctx);
     canvas.addEventListener('click', header.redirect);
     window.requestAnimationFrame(header.initialDraw);
-    canvas.onmousemove = checkMousePos;
+    canvas.onmousemove = header.checkMousePos;
 });
 
 
