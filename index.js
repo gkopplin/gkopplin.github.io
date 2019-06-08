@@ -4,11 +4,10 @@ import Tab from './tab';
 class Header {
     constructor(ctx) {
         this.colors = ["#7d7d7d", "#808080", "#838382", "#868686", "#858685"];
-        this.links = ["/", "/about-me", "/portfolio", "/resume", "/contact"];
+        this.links = ["about-me", "portfolio", "resume", "contact"];
         this.ctx = ctx;
         this.line = new Line({ posX: 100, ctx: this.ctx });
-        this.tabs = [new Tab({ limit: 220, posX: 540, posY: -250, ctx: this.ctx, color: this.colors[0] }),
-            new Tab({ limit: 170, posX: 630, posY: -200, ctx: this.ctx, color: this.colors[1] }),
+        this.tabs = [new Tab({ limit: 190, posX: 630, posY: -200, ctx: this.ctx, color: this.colors[1] }),
             new Tab({ limit: 340, posX: 720, posY: -150, ctx: this.ctx, color: this.colors[2] }),
             new Tab({ limit: 260, posX: 960, posY: -250, ctx: this.ctx, color: this.colors[3] }),
             new Tab({ limit: 230, posX: 1000, posY: -150, ctx: this.ctx, color: this.colors[4] })];
@@ -108,7 +107,12 @@ class Header {
     redirect() {
         this.tabs.forEach((tab, idx) => {
             if (tab.color === this.mouseColor) {
-                this.props.history.push(this.links[idx]);
+                if (this.links[idx] === "resume") {
+
+                } else {
+                    const pos = document.getElementById(this.links[idx]).offsetTop;
+                    window.scrollTo(0, pos);
+                }
             }
         });
     }

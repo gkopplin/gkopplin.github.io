@@ -12,26 +12,23 @@
 
 		<header>
 			<canvas width="900" height="400" id="canvas"></canvas>
-			<Link to="/" className="header-logo">
-			<h3>Grant Kopplin</h3>
-			</Link>
+			
+			<h2 class="header-logo">Grant Kopplin</h2>
+			
 		
 			<nav id="nav">
-				<Link to="/" id="home">
-				<h3>Home</h3>
-				</Link>
-				<Link to="/about-me" id="about-me">
-				<h3>About Me</h3>
-				</Link>
-				<Link to="/portfolio" id="portfolio">
-				<h3>Portfolio</h3>
-				</Link>
-				<Link to="/resume" id="resume">
-				<h3>Resume</h3>
-				</Link>
-				<Link to="/contact" id="contact">
-				<h3>Contact</h3>
-				</Link>
+				<a href="#about-me" id="about-me-link">
+					<h3>About Me</h3>
+				</a>
+				<a href="#portfolio" id="portfolio-link">
+					<h3>Portfolio</h3>
+				</a>
+				<a to="/resume" id="resume-link">
+					<h3>Resume</h3>
+				</a>
+				<a href="#contact" id="contact-link">
+					<h3>Contact</h3>
+				</a>
 			</nav>
 		</header>
 
@@ -40,6 +37,7 @@
 			<h2>Full Stack Software Engineer<br /> with experience in React, Redux, and Rails <br /> Based in New York City</h2>
 		</div>
 
+		<a name="about-me" id = "about-me"></a>
 		<h1>About Me</h1>
 		<div class="centered-content">
 			<p class="set-width">
@@ -77,6 +75,7 @@
 			</ul>
 		</section>
 
+		<a name="portfolio" id = "portfolio"></a>
 		<div class="centered-content">
 			<div class="set-width">
 				<h1>Portfolio</h1>
@@ -132,6 +131,7 @@
 			</div>
 		</div>
 
+		<a name="contact" id = "contact"></a>
 		<h1>Contact Information</h1>
 		<ul class="contact">
 			<li>

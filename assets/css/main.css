@@ -29,19 +29,15 @@ nav {
     right: 61px;
 }
 
-#home {
-	margin-right: 67px;
-}
-
-#about-me {
+#about-me-link {
 	margin-right: 46px;
 }
 
-#resume {
+#resume-link {
 	margin-left: 47px;
 }
 
-#contact {
+#contact-link {
 	margin-left: 62px;
 }
 
