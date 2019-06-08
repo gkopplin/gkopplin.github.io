@@ -6,9 +6,35 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<link rel="shortcut icon" type="image/png" href="images/favicon.png" />
-		<!-- <script src="static/bundle.js"></script> -->
+		<script src="dist/bundle.js"></script>
 	</head>
 	<body>
+
+		<header>
+			<canvas width="900" height="400" id="canvas"></canvas>
+			<Link to="/" className="header-logo">
+			<h3>Grant Kopplin</h3>
+			</Link>
+		
+			<nav id="nav">
+				<Link to="/" id="home">
+				<h3>Home</h3>
+				</Link>
+				<Link to="/about-me" id="about-me">
+				<h3>About Me</h3>
+				</Link>
+				<Link to="/portfolio" id="portfolio">
+				<h3>Portfolio</h3>
+				</Link>
+				<Link to="/resume" id="resume">
+				<h3>Resume</h3>
+				</Link>
+				<Link to="/contact" id="contact">
+				<h3>Contact</h3>
+				</Link>
+			</nav>
+		</header>
+
 		<div class="title-page">
 			<h2 class="title">Grant <br />Kopplin</h2>
 			<h2>Full Stack Software Engineer<br /> with experience in React, Redux, and Rails <br /> Based in New York City</h2>
