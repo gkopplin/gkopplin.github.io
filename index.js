@@ -108,7 +108,7 @@ class Header {
         this.tabs.forEach((tab, idx) => {
             if (tab.color === this.mouseColor) {
                 if (this.links[idx] === "resume") {
-
+                    window.open('https://gkopplin.github.io/resume.html', '_blank', `location=yes,height=700,width=${screen.width - 200},scrollbars=yes,status=yes`);
                 } else {
                     const pos = document.getElementById(this.links[idx]).offsetTop;
                     window.scrollTo(0, pos);
