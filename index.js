@@ -127,6 +127,17 @@ document.addEventListener('DOMContentLoaded', () => {
     canvas.addEventListener('click', header.redirect);
     window.requestAnimationFrame(header.initialDraw);
     canvas.onmousemove = header.checkMousePos;
+
+    const topLink = document.getElementsByClassName('top-link')[0];
+    const toggleTopLink = () => {
+        if (window.screenY === 0 ||
+            window.scrollY === 0) {
+            topLink.classList.add('hidden');
+        } else if (topLink.classList.contains('hidden')) {
+            topLink.classList.remove('hidden');
+        }
+    };
+    window.addEventListener('scroll', toggleTopLink);
 });
 
 

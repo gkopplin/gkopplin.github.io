@@ -94,6 +94,11 @@ img {
 	width: 100%;
 }
 
+.headshot {
+	width: 210px;
+	margin-right: 40px;
+}
+
 .project-container {
 	width: 300px;
 }
@@ -154,7 +159,21 @@ p {
 }
 
 .set-width{
-	width: 70%;
+	width: 60%;
+}
+
+.about-me-set-width{
+	text-indent: 40px;
+}
+
+.about-me-container {
+	display: flex;
+	flex-direction: column;
+	width: 50%;
+}
+
+.about-me-set-width:first-child {
+	margin-bottom: 5px;
 }
 
 .portfolio-img {
@@ -207,4 +226,14 @@ footer {
 .no-margin-body {
 	margin: 0px;
 	background: #525659;
+}
+
+.top-link {
+	position: fixed;
+	bottom: 30px;
+	left: 30px;
+}
+
+.hidden {
+	display: none;
 }
