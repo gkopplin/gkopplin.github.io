@@ -244,13 +244,12 @@ footer {
 
 .tooltip {
   position: relative;
-  display: inline-block;
 }
 
 .tooltip .tooltip-text {
   visibility: hidden;
   width: 120px;
-  background-color: black;
+  background-color: grey;
   color: #fff;
   text-align: center;
   border-radius: 6px;
@@ -270,5 +269,5 @@ footer {
   margin-left: -5px;
   border-width: 5px;
   border-style: solid;
-  border-color: black transparent transparent transparent;
+  border-color: grey transparent transparent transparent;
 }
