@@ -193,12 +193,13 @@ p {
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	margin-bottom: 40px;
+	padding-bottom: 20px;
+    margin-bottom: 40px;
+    border-bottom: solid 1px lightgray;
 }
 
-.project-desc {
-	padding-bottom: 40px;
-	border-bottom: solid 1px lightgray;
+.portfolio-project:last-of-type {
+	border-bottom: none;
 }
 
 span {
